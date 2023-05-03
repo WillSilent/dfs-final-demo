@@ -102,7 +102,7 @@ func MakeClient(filename string, method string) *Client {
 		//TODO 取出chunk的index，chunk的副本
 		chunkIdx := 1
 		replica := 1
-		redis.UpdateFileChunkData(fileMeta.FileSha1, chunkIdx, replica, args.IPAddr)
+		redis.UpdateFileChunkData(fileMeta.FileSha1, fileMeta.FileName, chunkIdx, replica, args.IPAddr)
 
 		// 4. 通知 namenode client即将退出
 

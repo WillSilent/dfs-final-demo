@@ -6,6 +6,7 @@ type FileMeta struct {
 	FileSize     int64  `field:"文件大小"` //bit
 	Tmp_Location string `field:"文件临时路径"`
 	UpdatedAt    string
+	ChunkNum     int
 }
 
 var fileMetas map[string]FileMeta
