@@ -1,4 +1,4 @@
-package redis
+package db
 
 import (
 	"time"
@@ -27,7 +27,7 @@ func newRedisPool() *redis.Pool {
 				conn.Close()
 				return nil, err
 			}
-			return conn,err
+			return conn, err
 		},
 	}
 }
